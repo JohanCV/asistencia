@@ -1,0 +1,15 @@
+footer.sticky-footer {
+  padding: 15px 0;
+  flex-shrink: 0;
+  .copyright {
+    line-height: 16px;
+    font-size: 0.8rem;
+  }
+}
+
+body.sidebar-toggled {
+  footer.sticky-footer {
+    width: 100%;
+    background: rgba(50, 48, 50, 1);
+  }
+}

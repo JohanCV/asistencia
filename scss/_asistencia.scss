@@ -1,0 +1,341 @@
+// -----------------------------------------------------
+
+// ---------------- Estilos generales ------------------
+
+// -----------------------------------------------------
+
+@font-face { 
+	font-family: 'Quicksand'; 
+	src: url('../vendor/fonts/Quicksand-Regular.ttf'); 
+} 
+
+.docente-card {
+    width: 80%;
+    margin: 70px auto;
+}
+
+// -----------------------------------------------------
+
+// -------------- Radio buttons input ------------------
+
+// -----------------------------------------------------
+h1, h2, h3, h4, h5, h6, span, div, li, a, td, tr, p {
+	font-family: 'Quicksand' !important;
+}
+*,
+*:after,
+*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ac-custom {
+	padding: 0;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.ac-custom h2 {
+	font-size: 3em;
+	font-weight: 300;
+	padding: 0 0 0.5em;
+	margin: 0 0 30px;
+}
+
+.ac-custom ul,
+.ac-custom ol {
+	list-style: none;
+	display: inline-block;
+	padding: 0;
+	margin: 10px auto 0 auto;
+}
+
+.ac-custom li {
+    margin: 0 auto;
+    margin-right: 0px;
+	padding: 0 5px;
+    position: relative;
+    display: inline-block;
+}
+
+.ac-custom label {
+	display: inline-block;
+	position: relative;
+	font-size: 14px;
+	padding: 0 0 0 27px;
+	vertical-align: top;
+	color:#000;
+	cursor: pointer;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"],
+.ac-custom label::before {
+	width: 25px;
+	height: 25px;
+	top: 60%;
+	left: 0;
+	margin-top: -15px;
+	position: absolute;
+	cursor: pointer;
+}
+
+.ac-custom input[type="checkbox"],
+.ac-custom input[type="radio"] {
+	opacity: 0;
+	-webkit-appearance: none;
+	display: inline-block;
+	vertical-align: middle;
+	z-index: 100;
+}
+
+.ac-custom label::before {
+	content: '';
+	border: 2px solid #858796;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.ac-radio label::before {
+	border-radius: 50%;
+}
+
+.ac-custom input[type="checkbox"]:checked + label,
+.ac-custom input[type="radio"]:checked + label {
+	color: #000;
+} 
+
+.ac-custom input[type="checkbox"]:checked + label::before,
+.ac-custom input[type="radio"]:checked + label::before {
+	opacity: 0.8;
+}
+
+/* General SVG and path styles */
+
+.ac-custom svg {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 72%;
+	margin-top: -20px;
+	left: 8px;
+	pointer-events: none;
+}
+
+.ac-custom svg path {
+	stroke: #990537;
+	stroke-width: 13px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
+/* Specific input, SVG and path styles */
+
+/* Circle */
+.ac-circle input[type="checkbox"],
+.ac-circle input[type="radio"],
+.ac-circle label::before {
+	width: 30px;
+	height: 30px;
+	margin-top: -15px;
+	left: 10px;
+	position: absolute;
+}
+
+.ac-circle label::before {
+	background-color: #000;
+	border: none;
+}
+
+.ac-circle svg {
+	width: 70px;
+	height: 70px;
+	margin-top: -35px;
+	left: -10px;
+}
+
+.ac-circle svg path {
+	stroke-width: 5px;
+} 
+
+/* Box Fill */
+.ac-boxfill svg path {
+	stroke-width: 8px;
+} 
+
+/* Swirl */
+.ac-swirl svg path {
+	stroke-width: 8px;
+}
+
+/* List */
+.ac-list ol {
+	list-style: decimal;
+	list-style-position: inside;
+}
+
+.ac-list ol li {
+	font-size: 2em;
+	padding: 1em 1em 0 2em;
+	text-indent: -40px;
+}
+
+.ac-list ol li label {
+	font-size: 1em;
+	text-indent: 0;
+	padding-left: 30px;
+}
+
+.ac-list label::before {
+	display: none;
+}
+
+.ac-list svg {
+	width: 100%;
+	height: 80px;
+	left: 0;
+	top: 1.2em;
+	margin-top: 0px;
+}
+
+.ac-list svg path {
+	stroke-width: 4px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 50em) {
+	section {
+		font-size: 80%;
+	}
+}
+
+
+// Vista de Asistencia
+.table-info-asistencia tr td {
+	text-align: left;
+}
+.table-info-asistencia tr th {
+	vertical-align: middle;
+	text-align: left;
+}
+.time-session {
+	background: #9a484854;
+    border-radius: 11px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+}
+
+// Card docente
+.docente-card .card-title {
+	margin-top: -35px;
+	padding: 22px;
+	background: linear-gradient(60deg,#848484,#4c4446);
+	box-shadow: 0 4px 20px 0 rgba(0,0,0,.14), 0 7px 10px -5px rgba(126, 78, 101, 0.4);
+	border-radius: 5px;
+	z-index: 100;
+}
+.docente-card .card-body {
+	background: #b5b5b5d4;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+	border-radius: 5px;
+}
+.text-dark {
+	color: #4c4446;
+}
+
+.wrapper-image {
+	#content-wrapper {
+		background-image: url(../img/0.jpg)!important;
+		background-size: cover;
+		background-position: center;
+	}
+	#content {
+		background: #865059a8;
+	}
+	
+}
+
+.wrapper-asistencia {
+	#content-wrapper {
+		background-image: url(../img/0.jpg)!important;
+		background-size: contain;
+		background-position: top;
+	}
+	#content {
+		background: #865059a8;
+	}
+	.table {
+		color: #fff;
+	}
+	.asistencia-lista {
+		color: #7e8088;
+	}
+	.message-text {
+		background: white;
+		width: 50%;
+		margin: 0 auto;
+		padding: 20px;
+		box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.46), 0 3px 1px -2px rgba(0,0,0,.4), 0 1px 5px 0 rgba(0,0,0,.3);
+	}
+}
+
+
+.login-body {
+	background: url(../img/fondo.jpg);
+    background-size: cover;
+    background-position: bottom;
+	.login-container {
+		background: #7777774f;
+		width: 100%;
+	}
+	.login-card {
+		background: #2d1f1f94;
+		width: 600px;
+   		margin: 0 auto;
+	}
+}
+.user-form {
+	width: 300px;
+    margin: 0 auto;
+}
+// DataTables Styles
+
+.form-admin {
+	width: 500px;
+	margin: 0 auto;
+}
+// #dataTable_wrapper .row:first-child .col-sm-12:last-child {
+// 	position: absolute !important;
+// }
+#dataTable tbody tr td:last-child {
+	width: 450px;
+}
+#dataTable_filter {
+	margin-left: -100% !important;
+}
+#dataTable_filter label {
+	text-transform: uppercase;
+}
+
+// -------------------------------------------
+
+//------------- Historial View ---------------
+
+// -------------------------------------------
+.modalExportarAsistencia {
+	.exportar-form {
+		i {
+			display: inline-block;
+		}
+		input {
+			cursor: pointer;
+			display: inline-block !important;
+			&:hover {
+				background: #e8d0d024;
+			}
+		}
+	}
+}

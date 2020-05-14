@@ -1,0 +1,79 @@
+// Pulling these images from Unsplash
+// Toshi the dog from https://unsplash.com/@charlesdeluvio - what a funny dog...
+
+.bg-login-image {
+  background: url('../img/logo.png') no-repeat;
+  background-position: center;
+  background-size: initial;
+}
+
+.bg-register-image {
+  background: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-password-image {
+  background: url('https://source.unsplash.com/oWTW-jNGl9I/600x800');
+  background-position: center;
+  background-size: cover;
+}
+
+form.user {
+
+  .custom-checkbox.small {
+    label {
+      line-height: 1.5rem;
+    }
+  }
+
+  .form-control-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .btn-user {
+    font-size: 0.8rem;
+    border-radius: 10rem;
+    padding: 0.75rem 1rem;
+  }
+
+}
+
+.btn-google {
+  @include button-variant($brand-google, $white);
+}
+
+.btn-facebook {
+  @include button-variant($brand-facebook, $white);
+}
+
+.login-card {
+  background: #0000004d;
+}
+.login-text-title {
+  color: #fff;
+  font-size: 18px;
+}
+html, body {
+  height: 100%;
+}
+.login-container {
+  height: 100%;
+  display: table;
+}
+.login-container > .row {
+  display: table-cell;
+  height: 100%;
+  vertical-align: middle;
+}
+.login-container > .row > div {
+  margin: 0 auto;
+}
+.login-cabecera p {
+  font-size: 20px !important;
+}
+.user-form input {
+  padding: 5px 15px !important;
+}
