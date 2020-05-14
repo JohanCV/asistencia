@@ -7,7 +7,7 @@ class Conectar {
 
  	public function conexion(){
  		try {
- 			$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=dufa","root","password");
+ 			$conectar = $this->dbh = new PDO("mysql:local=localhost;dbname=dufa","root","");
 		   
 		     return $conectar;
  			
@@ -21,10 +21,15 @@ class Conectar {
 	public function set_names(){
 	 	return $this->dbh->query("SET NAMES 'utf8'");
 	}
-
+	//Ruta del servidor
+	// public function ruta(){
+	//  	return "http://190.119.145.175/asistencia/";
+	// }
+	
+	//Ruta para el localhost
 	public function ruta(){
-	 	return "http://190.119.145.175/asistencia/";
-	}
+		return "http://localhost/proyecto/asistencia/";
+   	}
 
 }		
 		  	

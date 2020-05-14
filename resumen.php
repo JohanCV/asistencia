@@ -2,7 +2,7 @@
   require_once("config/conexion.php");
   require_once("modelo/Asistencia.php");
 
-  // if(isset($_SESSION["codasignatura"]) && isset($_SESSION["correo"]) && isset($_SESSION["nombre"]) && isset($_SESSION["escuela"])){
+if(isset($_SESSION["codasignatura"]) && isset($_SESSION["correo"]) && isset($_SESSION["nombre"]) && isset($_SESSION["escuela"])){
     $asis = new Asistencia();
 
 if(isset($_SESSION["id_cabeceraasis"])){
@@ -21,7 +21,7 @@ if(isset($_SESSION["id_cabeceraasis"])){
 <!-- Información del docente -->
 <div class="docente-card text-white mb-3">
   <div class="card-body">
-      <h3 class="card-title text-center">Control de Asistencia</h3>
+      <h3 class="card-title text-center">Control de Asistencia Docente</h3>
       <div class="row h-100 text-center">
           <div class="col-md-8 my-auto">
           <form method="POST" action=<?=$action; ?> >
@@ -57,39 +57,39 @@ if(isset($_SESSION["id_cabeceraasis"])){
                       </tr>
                       <tr>
                         <th scope="row">Semana</th>
-                        <td scope="row"><?php $semanas=date("W"); $semana= $semanas -33;  echo $semana; ?></td>                        
+                        <td scope="row"><?php $semanas=date("W"); $semana= $semanas -16;  echo $semana; ?></td>                        
                       </tr>
                       <tr>
                         <th scope="row">Tema</th>
                         <td>
-                          <?php $row = $asis->get_datos_asistencia_cabecera();  $tema = $row[14]; $_SESSION["theme"]= $tema; echo $tema; ?>
+                          <?php $row = $asis->get_datos_asistencia_cabecera();  $tema = $row; $_SESSION["theme"]= $tema; echo $tema; ?>
                         </td>
                       </tr>
                       <!--tr>
                         <th scope="row">Porcentaje</th>
                         <td>
-                          <?php// $row = $asis->get_datos_asistencia_cabecera();  $tema = $row[15]; print_r($tema); ?>
+                          <?php // $row = $asis->get_datos_asistencia_cabecera();  $tema = $row[15]; print_r($tema); ?>
                         </td>
-                      </tr-->
+                      </tr>
                       
                       <tr>
                         <th scope="row">N° Asistencias</th>
                         <td>
-                          <?= $asis->getCountEstadoAsistencia('P', $_SESSION["id_cabeceraasis"]) ?>
+                          <?php //$asis->getCountEstadoAsistencia('P', $_SESSION["id_cabeceraasis"]) ?>
                         </td>
                       </tr>
                       <tr>
                           <th scope="row">N° de Tardanzas</th>
                           <td>
-                          <?= $asis->getCountEstadoAsistencia('T', $_SESSION["id_cabeceraasis"])  ?>
+                          <?php //$asis->getCountEstadoAsistencia('T', $_SESSION["id_cabeceraasis"])  ?>
                           </td>
                       </tr>
                       <tr>
                           <th scope="row">N° de Faltas</th>
                           <td>
-                          <?= $asis->getCountEstadoAsistencia('F', $_SESSION["id_cabeceraasis"])?>
+                          <?php //$asis->getCountEstadoAsistencia('F', $_SESSION["id_cabeceraasis"]) ?>
                           </td>
-                          </tr>
+                      </tr-->
                   </tbody>
               </table>
            
@@ -98,8 +98,8 @@ if(isset($_SESSION["id_cabeceraasis"])){
             <h1>Periodo Académico 2019-II</h1><hr>
             <h3 class="text-white">Su sesión se cerrará en:</h3>
             <div id="countdown" class="display-4 time-session"></div>
-            <input type="hidden" name="enviaredicion" class="form-control" value="edit">
-            <a href=""><button class="btn btn-success"><i class="fas fa-fw fa-pen"></i> Editar Asistencia</button></a> 
+            <!--input type="hidden" name="enviaredicion" class="form-control" value="edit"-->
+            <!--a href=""><button class="btn btn-success"><i class="fas fa-fw fa-pen"></i> Editar Asistencia</button></a--> 
           </div>
           </form>   
       </div>
@@ -188,5 +188,5 @@ if(isset($_SESSION["id_cabeceraasis"])){
 <?php 
   // }else{
   //   header("Location:".Conectar::ruta()."index.php");
-  // }
+   }
 ?>

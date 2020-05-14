@@ -24,8 +24,8 @@
         <div class="container-fluid">
 
           <!-- Información del docente -->
-        
-        <form method="POST" action="asistencias.php">
+        <!--Este form es para eviar a asistencias donde se tomaria la asistencia de alumnos. -->
+        <form method="POST" action="asistencias.php">        
           <div class="docente-card text-white mb-3">
             <div class="card-body">
               <h3 class="card-title text-center">Control de Asistencia de Docentes</h3>
@@ -76,7 +76,7 @@
                                   <th scope="row">% de Avance a la fecha</th>
                                   <td>
                                     <div class="progress progress-md mb-2">
-                                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?= $rpta?>%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?= $rpta?>" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
                                       <?php
                                         echo $rpta.' %';
                                         $_SESSION["porcentaje"]  = $rpta;

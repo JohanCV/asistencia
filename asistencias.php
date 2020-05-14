@@ -124,7 +124,7 @@
                                       <button type="submit" name="guardarCab" class="btn btn-success" id="saveCab"><i class="fas fa-fw fa-check"></i> Guardar Avance</button>
                                     </td>
                                   </tr-->
-                                <?php// endif; ?>
+                                <?php // endif; ?>
                             </tbody>
                         </table>
                     </div>
@@ -139,16 +139,16 @@
             </div>
         </form>
 <!-- DataTales Example -->
-          <form method="POST" action="resumen.php"> 
+          <!--form method="POST" action="resumen.php"> 
             <div class="card shadow mb-4">
               <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary text-center">Lista de Alumnos</h6>
               </div>
               <div class="card-body">
-                <div class="">
+                <div class=""-->
                 
                 <?php 
-                  $_SESSION['asis']=array();
+                  /*$_SESSION['asis']=array();
                     echo "<table borde='2' class='table table-bordered asistencia-lista'  id='dataTable' width ='100%' cellspacing='0' >";
                           echo "<thead>";
                           echo "<tr>";
@@ -183,8 +183,9 @@
                           echo "</table>"; // Fin de la tabla
                           // cerrar conexión de base de datos
                           mysqli_close( $conexion );
+                          */
                   ?>         
-                </div>
+                <!--/div>
                 <div class="text-right">
                       <a href=""  class="btn btn-success" onclick="sendDataToPHP()">Guardar Asistencia</a>                 
                 </div>
@@ -192,7 +193,7 @@
               
             </div>
             </form>
-        </div>
+        </div-->
         
         <!-- /.container-fluid -->
 

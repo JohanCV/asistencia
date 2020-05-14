@@ -99,29 +99,30 @@ require_once("config/conexion.php");
         public function get_datos_asistencia_cabecera(){
             $conectar=parent::conexion();
                 parent::set_names();
-    
+                
                 $sql="SELECT * FROM `asistencia_cabecera` 
                 WHERE `facultad` = ?  AND `programa` = ?
                 AND  `asignatura` =? AND `codasig`=? AND `grupo` =? 
                 AND `horaini`=? AND `horafin`=?
                 and `dia`=? AND `fecha`=CURDATE() AND `correo`= ?";
-    
-                $sql=$conectar->prepare($sql);
-                $sql->bindValue(1, $_SESSION["facultadCab"]);
-                $sql->bindValue(2, $_SESSION["escuelaCab"]);
-                $sql->bindValue(3, $_SESSION["asignaturaCab"]);
-                $sql->bindValue(4, $_SESSION["codasignaturaCAb"]);
-                $sql->bindValue(5, $_SESSION["grupo"]);
-                $sql->bindValue(6, $_SESSION["hora_inicial"]);
-                $sql->bindValue(7, $_SESSION["hora_final"]);
-                $sql->bindValue(8, $_SESSION["dia"]);
-                $sql->bindValue(9, $_SESSION["correo"]);
-                $sql->execute();
 
-                $resultado = $sql->fetchAll();	
+                $sql=$conectar->prepare($sql);
+                $sql->bindValue(1, $_SESSION["facultadCab"]);       //var_dump($_SESSION["facultadCab"]);
+                $sql->bindValue(2, $_SESSION["escuelaCab"]);        //var_dump($_SESSION["escuelaCab"]);
+                $sql->bindValue(3, $_SESSION["asignaturaCab"]);     //var_dump($_SESSION["asignaturaCab"]);
+                $sql->bindValue(4, $_SESSION["codasignaturaCAb"]);  //var_dump($_SESSION["codasignaturaCAb"]);
+                $sql->bindValue(5, $_SESSION["grupo"]);             //var_dump($_SESSION["grupo"]);
+                $sql->bindValue(6, $_SESSION["hora_inicial"]);      //var_dump($_SESSION["hora_inicial"]);
+                $sql->bindValue(7, $_SESSION["hora_final"]);        //var_dump($_SESSION["hora_final"]);
+                $sql->bindValue(8, $_SESSION["dia"]);               //var_dump($_SESSION["dia"]);
+                $sql->bindValue(9, $_SESSION["correo"]);            //var_dump($_SESSION["correo"]);  
+                $sql->execute();                                    //var_dump($sql->execute());
+
+                $resultado = $sql->fetchAll();	                    //var_dump($resultado);
+                $resp = "";
                 foreach( $resultado as $resul){
                     $resp= $resul;
-                }
+                }                                                   //var_dump($resp);
                 return $resp;
         }
 

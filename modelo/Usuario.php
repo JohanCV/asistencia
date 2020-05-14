@@ -56,14 +56,15 @@ require_once("Classes/PHPExcel.php");
                             $rowcabecera = $asis->get_asistencia_cabecera();
                             $rowdetalle = $asis->getFilasAsistenciaDetalle($id_cabecera);
 
-                            var_dump($rowcabecera); //print_r($this->pdo->errorInfo());
+                            //var_dump($rowcabecera); //print_r($this->pdo->errorInfo());
                             var_dump($rowdetalle); print_r($rowdetalle);
 
-                            if($rowcabecera == 0){echo $rowcabecera;
+                            if($rowcabecera == 0){//echo $rowcabecera;
                                 header("Location:".Conectar::ruta()."asistencia.php");
                             }else{                                
                                 switch ($rowdetalle) {
                                     case '0':
+                                        //Usar este header si vamos a tomar asistencia de alumnos
                                         header("Location:".Conectar::ruta()."asistencias.php");
                                         break;              
                                     default:
@@ -105,7 +106,7 @@ require_once("Classes/PHPExcel.php");
                 $tamanio = strlen($correo);
                 $pos = strpos($correo, $findme);
                 $partcorreo = substr($correo,$pos,$tamanio-1);
-        
+                $macs = '';
 
                 if(empty($correo) and empty($password)){
                     header("Location:".Conectar::ruta()."index.php");
@@ -260,8 +261,8 @@ require_once("Classes/PHPExcel.php");
                 and dutic_docentes_19.grupo=dutic_horarios_19.grupo
                 
                 and dutic_horarios_19.dia = WEEKDAY(CURDATE())+1
-                #and CAST('09:45' AS time)
-                and  time (NOW())
+                and CAST('09:45' AS time)
+                #and  time (NOW())
 
                 BETWEEN CAST(dutic_horarios_19.hora_ini AS time) AND DATE_SUB(CAST(dutic_horarios_19.hora_fin AS time), INTERVAL 1 MINUTE)
                 
