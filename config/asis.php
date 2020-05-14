@@ -1,7 +1,7 @@
 <?php 
 //conexion
 $usuario = "root";
-$password = "";
+$password = "password";
 $servidor = "localhost";
 $basededatos = "dufa";
 
