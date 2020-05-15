@@ -47,7 +47,7 @@
         <form method="POST" action="">
           <div class="docente-card text-white mb-3">
             <div class="card-body">
-              <h3 class="card-title text-center">Control de Asistencia de Alumnos</h3>
+              <h3 class="card-title text-center">Control de Asistencia de Docentes</h3>
                 <div class="row h-100 text-center">
                     <div class="col-md-8 my-auto">
                         <table class="table table-sm text-uppercase table-info-asistencia">
@@ -83,7 +83,7 @@
                                 </tr>
                                 <tr>
                                   <th scope="row">Semana</th>
-                                  <td><?php $semanas=date("W"); $_SESSION["semana"]= $semanas -33;  echo $_SESSION["semana"]; ?></td>
+                                  <td><?php $semanas=date("W"); $_SESSION["semana"]= $semanas -16;  echo $_SESSION["semana"]; ?></td>
                                 </tr>
                                 <tr>
                                   <th scope="row">Tema de avance</th>
@@ -101,7 +101,7 @@
                                   <th scope="row">% de Avance a la fecha</th>
                                   <td>
                                     <div class="progress progress-md mb-2">
-                                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?= $rpta?>%" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
+                                      <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: <?= $rpta?>" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100">
                                       <?php
                                         echo $rpta.' %';
                                         $_SESSION["porcentaje"]  = $rpta;
